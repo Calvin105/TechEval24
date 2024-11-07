@@ -1,7 +1,0 @@
-rgb(239 246 139 / var(--tw-text-opacity))
-font-family: Skranji,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"
-
-backdrop-filter: blur(16px);
-border-bottom-width: 1px;
-border-color: #ffffff4d;
-transition: backdrop-filter .2s ease-in-out, -webkit-backdrop-filter .2s ease-in-out;
