@@ -17,8 +17,7 @@ body {
     font-family: "Proza Libre", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
 .proza-libre-medium {
     font-family: "Proza Libre", sans-serif;
     font-weight: 500;
@@ -216,6 +215,11 @@ body {
 .div-profile {
     width: 11rem;
     position: relative;
+    display: block;
+    text-align: center;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: .5rem;
 }
 .profile-role {
     font-size: 0.9rem;
@@ -234,4 +238,56 @@ body {
     line-height: 1.5rem;
     color: rgb(237, 249, 255);
     text-align: center;
+}
+.white-span {
+    background-color: rgb(237, 249, 255);
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+}
+.member-profile {
+    max-width: 250px;
+    width: 100%;
+    margin-bottom: -5px;
+    position: relative;
+    z-index: 1;
+}
+.div-profile:hover {
+    height: 170px;
+    transition: .3s;
+}
+.profile-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: .5rem;
+}
+.fb-icon {
+    font-size: 24px;
+    color: #777;
+    margin: 0 7px;
+}
+.fb-icon:hover {
+    color: #3B5897;
+    transition: .3s;
+}
+.li-icon {
+    font-size: 24px;
+    color: #777;
+    margin: 0 7px;
+}
+.li-icon:hover {
+    color: #0B63BD;
+    transition: .3s;
+}
+.ig-icon {
+    font-size: 24px;
+    color: #777;
+    margin: 0 7px;
+}
+.ig-icon:hover {
+    color: #5F4A9D;
+    transition: .3s;
 }

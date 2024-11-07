@@ -20,6 +20,17 @@ class Member(db.Model):
         self.insta = ig
         self.linkedin = li
 
+    def to_json_without_img(self):
+        return {
+            "id": self._id,
+            "name": self.name,
+            "dept": self.dept,
+            "role": self.role,
+            "fb": self.facebook,
+            "ig": self.insta,
+            "li": self.linkedin
+        }
+    
     def to_json(self):
         return {
             "id": self._id,
