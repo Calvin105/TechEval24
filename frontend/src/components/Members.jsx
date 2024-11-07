@@ -42,16 +42,16 @@ const Members = () => {
     <div className="members-cat-sec">
       <div className="div-fixed">
         <ul className="members-cat">
-          <li><h1 className="members-title skranji-bold f-60">Meet the team.</h1></li>
-          <li><a onClick={() => parentToChild("all")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 1 ? rgb(15, 23, 25) : none}}>All</a></li>
-          <li><a onClick={() => parentToChild("top committee")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 2 ? rgb(15, 23, 25) : none}}>Top Committee</a></li>
-          <li><a onClick={() => parentToChild("programme")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 3 ? rgb(15, 23, 25) : none}}>Programme</a></li>
-          <li><a onClick={() => parentToChild("public relations and documentation")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 4 ? rgb(15, 23, 25) : none}}>Public Relations and Documentation</a></li>
-          <li><a onClick={() => parentToChild("publicity and marketing")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 5 ? rgb(15, 23, 25) : none}}>Publicity and Marketing</a></li>
-          <li><a onClick={() => parentToChild("sponsorship")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 6 ? rgb(15, 23, 25) : none}}>Sponsorship</a></li>
-          <li><a onClick={() => parentToChild("logistics")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 7 ? rgb(15, 23, 25) : none}}>Logistics</a></li>
-          <li><a onClick={() => parentToChild("technical")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 8 ? rgb(15, 23, 25) : none}}>Technical</a></li>
-          <li><a onClick={() => parentToChild("design and multimedia")} className="btn-members-cat proza-libre-medium" style={{backgroundColor: activeButton === 9 ? rgb(15, 23, 25) : none}}>Design and Multimedia</a></li>
+          <li><h1 className="skranji-bold members-title">Meet the team.</h1></li>
+          <li><a onClick={() => parentToChild("all")} className={`proza-libre-medium btn-members-cat ${activeButton === 1 ? "active": ""}`}>All</a></li>
+          <li><a onClick={() => parentToChild("top committee")} className={`proza-libre-medium btn-members-cat ${activeButton === 2 ? "active": ""}`}>Top Committee</a></li>
+          <li><a onClick={() => parentToChild("programme")} className={`proza-libre-medium btn-members-cat ${activeButton === 3 ? "active": ""}`}>Programme</a></li>
+          <li><a onClick={() => parentToChild("public relations and documentation")} className={`proza-libre-medium btn-members-cat ${activeButton === 4 ? "active": ""}`}>Public Relations and Documentation</a></li>
+          <li><a onClick={() => parentToChild("publicity and marketing")} className={`proza-libre-medium btn-members-cat ${activeButton === 5 ? "active": ""}`}>Publicity and Marketing</a></li>
+          <li><a onClick={() => parentToChild("sponsorship")} className={`proza-libre-medium btn-members-cat ${activeButton === 6 ? "active": ""}`}>Sponsorship</a></li>
+          <li><a onClick={() => parentToChild("logistics")} className={`proza-libre-medium btn-members-cat ${activeButton === 7 ? "active": ""}`}>Logistics</a></li>
+          <li><a onClick={() => parentToChild("technical")} className={`proza-libre-medium btn-members-cat ${activeButton === 8 ? "active": ""}`}>Technical</a></li>
+          <li><a onClick={() => parentToChild("design and multimedia")} className={`proza-libre-medium btn-members-cat ${activeButton === 9 ? "active": ""}`}>Design and Multimedia</a></li>
         </ul>
       </div>
       <MembersGrid parentToChild={filterBy}/>

@@ -167,9 +167,8 @@ body {
 }
 .btn-members-cat {
     align-items: center;
-    padding: .225rem .325rem;
+    padding: .225rem .525rem;
     border: none;
-    background: none;
     color: rgb(237, 249, 255);
     min-height: 3rem;
     flex-wrap: wrap;
@@ -181,6 +180,10 @@ body {
     cursor: pointer;
     display: inline-flex;
     margin-left: 1rem;
+}
+.btn-members-cat.active {
+    background-color: #0f1719;
+    color: rgb(132, 191, 236);;
 }
 .btn-members-cat:hover {
     background-color: #303B41;

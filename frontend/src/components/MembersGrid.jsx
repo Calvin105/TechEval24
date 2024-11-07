@@ -33,7 +33,7 @@ const MembersGrid = (props) => {
   const renderListOfMembers = (filteredData) => {
     return filteredData.map(member =>( <Member
                                   className="member-item"
-                                  key={member.id}
+                                  key={ member.id }
                                   name={member.name}
                                   dept={member.dept}
                                   role={member.role}
