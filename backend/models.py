@@ -10,18 +10,15 @@ class Member(db.Model):
     insta = db.Column(db.String(100), nullable=True)
     linkedin = db.Column(db.String(100), nullable=True)
 
-    def __init__(self, name, dept, role, img_url, fb=None, ig=None, li=None):
+    def __init__(self, name, dept, role, img_url, fb, ig, li):
         super().__init__()
         self.name = name
         self.dept = dept
         self.role = role
         self.img_url = img_url
-        if fb:
-            self.fb = fb
-        if ig:
-            self.ig = ig
-        if li:
-            self.linkedin = li
+        self.facebook = fb
+        self.insta = ig
+        self.linkedin = li
 
     def to_json(self):
         return {
@@ -34,4 +31,8 @@ class Member(db.Model):
             "ig": self.insta,
             "li": self.linkedin
         }
+    
+    def __repr__(self):
+        return super().__repr__()
+        print(f"Member('id'={self.id}, 'name'={self.name}, 'dept'={self.dept}, 'role'={self.role}, 'img_url'={self.img}, 'fb'={self.fb}, 'ig'={self.ig}, 'linkedin'={self.li}")
     

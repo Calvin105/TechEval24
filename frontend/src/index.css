@@ -194,7 +194,6 @@ body {
 .members-grid-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 3fr));
-    grid-template-rows: repeat(3, minmax(0, 3fr));
     gap: 10px;
     margin: 0 auto;
 }

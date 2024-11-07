@@ -8,7 +8,7 @@ from models import Member
 
 # For one time use only, don't use it again unless changes in json file.
 def init_members():
-    path_to_json = os.path.join(os.getcwd(), "backend", "members.json")
+    path_to_json = os.path.join(os.getcwd(), "members.json")
     with open(path_to_json, "r") as f:
         members = json.loads(f.read())
     
@@ -31,8 +31,25 @@ def delete_all_members():
     Member.query.delete()
     db.session.commit()
 
+
 # Get all CS member
 @app.route("/about-us", methods=["GET"])
 def get_members():
-    init_members()
-    return render_template("about-us.html", values=Member.query.all())
+    members = Member.query.all()
+    result = [member.to_json() for member in members]
+    return jsonify(result)
+
+# @app.route("/about-us", methods=["POST"])
+# def create_members():
+#     try:
+#         data = request.json
+
+#         name = data.get("name")
+#         dept = data.get("dept")
+#         role = data.get("role")
+#         img_url = data.get("imgUrl")
+#         fb = data.get("facebook")
+#         ig = data.get("instagram")
+#         li = data.get("linkedin")
+#         member_model = Member(name, dept, role, img_url, fb=fb, ig=ig, li=li)
+
